@@ -1,0 +1,16 @@
+/**
+ * @flow
+ */
+import styled from 'styled-components';
+
+const {{ properCase name }} = styled.div`
+  /* how to use props in a styled-component */
+  padding: ${props => props.small ? '0.25em 1em' : '0.5em 2em'};
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+`;
+
+export default {{ properCase name }};
