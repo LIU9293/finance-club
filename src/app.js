@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import RoundButton from 'components/RoundButton';
+import store from 'Redux/store';
+import { Provider } from 'react-redux';
+import AppRoute from './route';
 import './app.css';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <RoundButton primary>demo</RoundButton>
-      </div>
+      <Provider store={store}>
+        <AppRoute />
+      </Provider>
     );
   }
 }
