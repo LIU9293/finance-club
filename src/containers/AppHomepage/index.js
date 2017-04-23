@@ -5,6 +5,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import MainSection from 'components/MainSection';
+import IntroSection from 'components/IntroSection';
+import CommentSection from 'components/CommentSection';
 
 type HomepageProps = {
   dispatch: func
@@ -24,6 +26,8 @@ export class Homepage extends React.PureComponent {
           ]}
         />
         <MainSection />
+        <IntroSection />
+        <CommentSection />
       </div>
     );
   }

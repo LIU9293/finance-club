@@ -16,7 +16,22 @@ class Header extends React.PureComponent {
   props: headerProps
 
   state = {
-    current: 'homepage'
+    current: 'homepage',
+    light: false
+  }
+
+  componentDidMount() {
+    document.addEventListener('scroll', () => {
+      if(window.pageYOffset > window.innerHeight) {
+        if(!this.state.light){
+          this.setState({light: true});
+        }
+      } else {
+        if(this.state.light){
+          this.setState({light: false});
+        }
+      }
+    });
   }
 
   handleClick = (e: any) => {
@@ -27,7 +42,7 @@ class Header extends React.PureComponent {
 
   render(){
     return(
-      <HeaderRow>
+      <HeaderRow type={this.state.light ? 'light' : 'dark'}>
         <Row style={{height: '80px'}} type='flex' align='middle' justify='space-between'>
           <Col xs={24} sm={24} md={5} lg={4}>
             <img src={logo} alt={'logo'} height={60} />
@@ -37,8 +52,8 @@ class Header extends React.PureComponent {
               onClick={this.handleClick}
               selectedKeys={[this.state.current]}
               mode={this.props.inline ? 'inline' : 'horizontal'}
-              style={{float: 'right', background: 'transparent'}}
-              theme={'dark'}
+              className='nav-menu'
+              theme={this.state.light ? 'light' : 'dark'}
             >
               <Menu.Item key='homepage'>
                 {'首页'}

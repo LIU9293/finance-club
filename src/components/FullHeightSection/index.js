@@ -12,7 +12,7 @@ const FullHeightSection = styled.div`
   width: 100%;
   height: 100vh;
   background-color: ${(props: FullHeightSectionProps) => props.background || 'white'};
-  background-image: ${(props: FullHeightSectionProps) => `url(${props.backgroundImage})` || 'none'};
+  background-image: ${(props: FullHeightSectionProps) => props.backgroundImage ? `url(${props.backgroundImage})` : 'none'};
   background-position: center center;
   background-size: cover;
   display: flex;

@@ -55,6 +55,7 @@
   "dependencies": {
     "antd": "2.9.1",
     "enquire.js": "2.1.6",
+    "faker": "^4.1.0",
     "react": "15.5.4",
     "react-dom": "15.5.4",
     "react-helmet": "5.0.3",
@@ -115,7 +116,9 @@
   "antd-theme": {
     "@primary-color": "#000"
   },
-  "pre-commit": ["lint"],
+  "pre-commit": [
+    "lint"
+  ],
   "eslintConfig": {
     "extends": "react-app"
   }

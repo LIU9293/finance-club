@@ -1,6 +1,51 @@
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+
 html, body {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   font-family: -apple-system, "PingFang SC", segoe, "Roboto", "Arial", sans-serif;
+}
+
+.section-wrapper {
+  width: 80%;
+  max-width: 1440px;
+  margin: 96px auto;
+  background-color: #eee;
+}
+
+@media (max-width: 767px) {
+  .section-wrapper {
+    width: 100%;
+  }
+  .row-margin-small {
+    margin-bottom: 20px;
+  }
+}
+
+p {
+  color: #191919;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 10px 0;
+  color: #191919;
+}
+
+h2, h3, h4, h5, h6 {
+  color: #191919;
+}
+
+.nav-menu {
+  float: right;
+  background: transparent;
+  height: 80px;
+  border: none;
+  line-height: 80px;
+  font-size: 18px;
 }
