@@ -1,0 +1,37 @@
+[ignore]
+.*/styled-components/src/.*
+.*/draft-js/lib/.*
+.*/node_modules/styled-components/dangerfile.js
+.*/node_modules/styled-components/flow-typed/npm/express_v4.x.x.js
+.*/node_modules/styled-components/lib/models/StyleSheet.js.flow
+.*node_modules/fbjs/lib/partitionObjectByKey.js.flow
+
+[libs]
+config/flow/declarations/
+config/flow/flow-typed/
+
+node_modules/styled-components/flow-typed/react-native.js
+node_modules/styled-components/flow-typed/glamor_vx.x.x.js
+node_modules/styled-components/flow-typed/lodash_v4.x.x.js
+node_modules/styled-components/flow-typed/inline-style-prefixer_vx.x.x.js
+
+[options]
+module.use_strict=true
+
+module.name_mapper.extension='png' -> '<PROJECT_ROOT>/config/flow/WebpackAsset.js.flow'
+module.name_mapper.extension='jpg' -> '<PROJECT_ROOT>/config/flow/WebpackAsset.js.flow'
+module.name_mapper.extension='svg' -> '<PROJECT_ROOT>/config/flow/WebpackAsset.js.flow'
+module.name_mapper.extension='woff' -> '<PROJECT_ROOT>/config/flow/WebpackAsset.js.flow'
+
+module.name_mapper='^components\/\(.*\)$' -> '<PROJECT_ROOT>/src/components/\1'
+module.name_mapper='^containers\/\(.*\)$' -> '<PROJECT_ROOT>/src/containers/\1'
+module.name_mapper='^constants\/\(.*\)$' -> '<PROJECT_ROOT>/src/constants/\1'
+module.name_mapper='^state\/\(.*\)$' -> '<PROJECT_ROOT>/src/state/\1'
+module.name_mapper='^modules\/\(.*\)$' -> '<PROJECT_ROOT>/src/modules/\1'
+module.name_mapper='^tests\/\(.*\)$' -> '<PROJECT_ROOT>/src/tests/\1'
+module.name_mapper='^utils\/\(.*\)$' -> '<PROJECT_ROOT>/src/utils/\1'
+
+# Yeah, we use this to ignore errors...
+# Just add it, if you have a different suppress_comment notation
+suppress_comment=.*\\$FlowIssue
+suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe

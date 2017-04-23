@@ -5,7 +5,7 @@ import {
   Switch,
   Redirect
 } from 'react-router-dom';
-import HomePage from 'containers/HomePage';
+import HomePage from 'containers/AppHomepage';
 import AppLayout from 'containers/AppLayout';
 
 const Routes = () => (
