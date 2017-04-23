@@ -68,7 +68,8 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "flow": "./node_modules/.bin/flow check",
-    "test": "node scripts/test.js --env=jsdom --coverage",
+    "test": "node scripts/test.js --env=jsdom",
+    "lint": "eslint src/*.js --ignore-path .gitignore --ignore-pattern /config/*",
     "test:clean": "rimraf ./coverage",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
@@ -82,7 +83,7 @@
       "!src/*/RbGenerated*/*.{js,jsx}",
       "!src/app.js",
       "!src/index.js",
-      "!src/routes.js",
+      "!src/route.js",
       "!src/**/*.stories.js",
       "!src/**/constants.js"
     ],
@@ -114,6 +115,7 @@
   "antd-theme": {
     "@primary-color": "#000"
   },
+  "pre-commit": ["lint"],
   "eslintConfig": {
     "extends": "react-app"
   }

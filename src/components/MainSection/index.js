@@ -5,6 +5,7 @@
 import React from 'react';
 import FullHeightSection from 'components/FullHeightSection';
 import SectionContent from 'components/SectionContent';
+import RoundButton from 'components/RoundButton';
 import {
   FrontLabel
 } from './style';
@@ -24,6 +25,7 @@ function MainSection(props: mainSectionProps) {
         >
           财富之路从未如此畅通
         </FrontLabel>
+        <RoundButton primary>立即加入</RoundButton>
       </SectionContent>
     </FullHeightSection>
   );
