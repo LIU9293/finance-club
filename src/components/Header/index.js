@@ -28,15 +28,17 @@ class Header extends React.PureComponent {
   render(){
     return(
       <HeaderRow>
-        <Row>
+        <Row style={{height: '80px'}} type='flex' align='middle' justify='space-between'>
           <Col xs={24} sm={24} md={5} lg={4}>
-            <img src={logo} alt={'logo'} />
+            <img src={logo} alt={'logo'} height={60} />
           </Col>
-          <Col xs={0} sm={0} md={19} lg={20} style={{textAlign: 'right'}}>
+          <Col xs={0} sm={0} md={19} lg={20}>
             <Menu
               onClick={this.handleClick}
               selectedKeys={[this.state.current]}
               mode={this.props.inline ? 'inline' : 'horizontal'}
+              style={{float: 'right', background: 'transparent'}}
+              theme={'dark'}
             >
               <Menu.Item key='homepage'>
                 {'首页'}

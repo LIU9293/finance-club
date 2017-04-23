@@ -1,11 +1,24 @@
 /**
  * Homepage
  */
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
+import FullHeightSection from 'compnents/FullHeightSection';
+import {
+  ContentArea,
+  FrontLabel,
+} from './style';
+import BG1 from 'public/finance1.jpg';
 
-export class Homepage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+type HomepageProps = {
+  dispatch: func
+}
+
+export class Homepage extends React.PureComponent {
+
+  props: HomepageProps
+
   render() {
     return (
       <div>
@@ -15,16 +28,17 @@ export class Homepage extends React.PureComponent { // eslint-disable-line react
             { name: 'description', content: '投行之家金融俱乐部' },
           ]}
         />
-        <div>homepage</div>
+        <FullHeightSection backgroundImage={BG1}>
+          <ContentArea>
+            <FrontLabel>
+              投行之家金融俱乐部
+            </FrontLabel>
+          </ContentArea>
+        </FullHeightSection>
       </div>
     );
   }
 }
-
-Homepage.propTypes = {
-  dispatch: PropTypes.func.isRequired,
-};
-
 
 function mapDispatchToProps(dispatch) {
   return {

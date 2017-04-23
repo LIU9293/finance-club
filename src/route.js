@@ -17,6 +17,6 @@ const Routes = () => (
       </Switch>
     </AppLayout>
   </Router>
-)
+);
 
 export default Routes;

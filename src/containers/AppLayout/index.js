@@ -1,20 +1,25 @@
 /*
  * Layout
  */
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { Layout } from 'antd';
 import AppHeader from 'components/Header';
 import AppFooter from 'components/Footer';
-const { Header, Footer, Content } = Layout;
+const { Footer, Content } = Layout;
+
+type AppLayoutProps = {
+  dispatch: func
+}
 
 export class AppLayout extends React.PureComponent {
+
+  props: AppLayoutProps
+
   render() {
     return (
       <Layout id='app'>
-        <Header>
-          <AppHeader />
-        </Header>
+        <AppHeader />
         <Content>
           {this.props.children}
         </Content>
@@ -25,11 +30,6 @@ export class AppLayout extends React.PureComponent {
     );
   }
 }
-
-Layout.propTypes = {
-  dispatch: PropTypes.func.isRequired,
-};
-
 
 function mapDispatchToProps(dispatch) {
   return {
