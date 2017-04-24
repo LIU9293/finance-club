@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { Layout } from 'antd';
 import AppHeader from 'components/Header';
 import AppFooter from 'components/Footer';
-const { Footer, Content } = Layout;
+const { Content } = Layout;
 
 type AppLayoutProps = {
   dispatch: func
@@ -23,9 +23,7 @@ export class AppLayout extends React.PureComponent {
         <Content>
           {this.props.children}
         </Content>
-        <Footer>
-          <AppFooter />
-        </Footer>
+        <AppFooter />
       </Layout>
     );
   }

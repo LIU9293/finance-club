@@ -3,15 +3,19 @@
 * Footer
 */
 import React from 'react';
-// import styled from 'styled-components';
+import {
+  FooterWrapper,
+  FooterInner
+} from './style';
 
 type footerProps = {
 }
 
 function Footer(props: footerProps) {
   return (
-    <div>
-    </div>
+    <FooterWrapper>
+      <FooterInner></FooterInner>
+    </FooterWrapper>
   );
 }
 
