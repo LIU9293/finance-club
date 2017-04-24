@@ -46,7 +46,9 @@ class Header extends React.Component {
       <HeaderRow type={this.state.light ? 'light' : 'dark'}>
         <Row style={{height: '80px'}} type='flex' align='middle' justify='space-between'>
           <Col xs={24} sm={24} md={5} lg={4}>
-            <img src={logo} alt={'logo'} height={60} />
+            <Link to='/'>
+              <img src={logo} alt={'logo'} height={60} />
+            </Link>
           </Col>
           <Col xs={0} sm={0} md={19} lg={20}>
             <Menu
@@ -67,7 +69,9 @@ class Header extends React.Component {
                 </Link>
               </Menu.Item>
               <Menu.Item key='contact'>
-                {'联系'}
+                <Link to='/about'>
+                  {'联系'}
+                </Link>
               </Menu.Item>
             </Menu>
           </Col>

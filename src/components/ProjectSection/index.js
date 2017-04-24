@@ -7,6 +7,7 @@ import React from 'react';
 import FullHeightSection from 'components/FullHeightSection';
 import SectionContent from 'components/SectionContent';
 import RoundButton from 'components/RoundButton';
+import { Link } from 'react-router-dom';
 import {
   ImageFilter
 } from 'components/IntroSection/style';
@@ -31,7 +32,9 @@ function ProjectSection(props: projectSectionProps) {
         >
           获得顶级证券公司，金融机构的实习机会，从未如此触手可及
         </FrontLabel>
-        <RoundButton primary>立即了解</RoundButton>
+        <Link to='/refer'>
+          <RoundButton primary>立即了解</RoundButton>
+        </Link>
       </SectionContent>
     </FullHeightSection>
   );

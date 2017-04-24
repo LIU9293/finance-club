@@ -17,9 +17,7 @@ export class JoinUs extends React.PureComponent {
   render() {
     return (
       <div>
-        <Helmet
-          title="加入我们 - 投行之家金融俱乐部"
-        />
+        <Helmet title="加入我们 - 投行之家金融俱乐部" />
         <FullHeightSection
           style={{height: '500px'}}
           backgroundImage={BG5}
