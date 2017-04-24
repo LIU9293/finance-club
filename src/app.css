@@ -43,9 +43,9 @@ h2, h3, h4, h5, h6 {
 
 .nav-menu {
   float: right;
-  background: transparent;
+  background: transparent !important;
   height: 80px;
   border: none;
-  line-height: 80px;
-  font-size: 18px;
+  line-height: 80px !important;
+  font-size: 18px !important;
 }
