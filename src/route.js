@@ -1,22 +1,18 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect
+  Route
 } from 'react-router-dom';
-import HomePage from 'containers/AppHomepage';
 import AppLayout from 'containers/AppLayout';
 
-const Routes = () => (
-  <Router>
-    <AppLayout>
-      <Switch>
-        <Route path="/" component={HomePage} />
-        <Redirect from="*" to="/"/>
-      </Switch>
-    </AppLayout>
-  </Router>
-);
+class Routes extends React.Component {
+  render() {
+    return (
+      <Router>
+        <Route path="/" render={props => <AppLayout {...props} />} />
+      </Router>
+    );
+  }
+}
 
 export default Routes;

@@ -4,6 +4,7 @@
 */
 import React from 'react';
 import { Menu, Row, Col } from 'antd';
+import { Link } from 'react-router-dom';
 import {
   HeaderRow
 } from './style';
@@ -12,7 +13,7 @@ const logo = require('./logo.svg');
 type headerProps = {
 }
 
-class Header extends React.PureComponent {
+class Header extends React.Component {
   props: headerProps
 
   state = {
@@ -22,7 +23,7 @@ class Header extends React.PureComponent {
 
   componentDidMount() {
     document.addEventListener('scroll', () => {
-      if(window.pageYOffset > window.innerHeight) {
+      if(window.pageYOffset > (window.innerHeight - 80)) {
         if(!this.state.light){
           this.setState({light: true});
         }
@@ -40,7 +41,7 @@ class Header extends React.PureComponent {
     });
   }
 
-  render(){
+  render() {
     return(
       <HeaderRow type={this.state.light ? 'light' : 'dark'}>
         <Row style={{height: '80px'}} type='flex' align='middle' justify='space-between'>
@@ -56,10 +57,14 @@ class Header extends React.PureComponent {
               theme={this.state.light ? 'light' : 'dark'}
             >
               <Menu.Item key='homepage'>
-                {'首页'}
+                <Link to='/'>
+                  {'首页'}
+                </Link>
               </Menu.Item>
               <Menu.Item key='join'>
-                {'加入'}
+                <Link to='/join'>
+                  {'加入'}
+                </Link>
               </Menu.Item>
               <Menu.Item key='contact'>
                 {'联系'}

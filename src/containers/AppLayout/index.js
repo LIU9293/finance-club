@@ -6,22 +6,32 @@ import { connect } from 'react-redux';
 import { Layout } from 'antd';
 import AppHeader from 'components/Header';
 import AppFooter from 'components/Footer';
+import HomePage from 'containers/AppHomepage';
+import JoinUs from 'containers/JoinUs';
 const { Content } = Layout;
 
 type AppLayoutProps = {
   dispatch: func
 }
 
-export class AppLayout extends React.PureComponent {
+export class AppLayout extends React.Component {
 
   props: AppLayoutProps
 
   render() {
+    let child;
+    switch (this.props.location.pathname) {
+      case '/join':
+        child = <JoinUs />
+        break;
+      default:
+        child = <HomePage />
+    }
     return (
       <Layout id='app'>
         <AppHeader />
         <Content>
-          {this.props.children}
+          {child}
         </Content>
         <AppFooter />
       </Layout>

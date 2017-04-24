@@ -4,11 +4,16 @@
 */
 import React from 'react';
 import {
-  JobTitle
+  JobTitle,
+  JobDescription,
+  JobNeed,
+  JobNeedItem,
+  SectionTitle
 } from './style';
 
 type jobItemProps = {
-  jobTitle: string
+  jobTitle: string,
+  needs: array
 }
 
 function JobItem(props: jobItemProps) {
@@ -17,6 +22,13 @@ function JobItem(props: jobItemProps) {
       <JobTitle>
         {props.jobTitle}
       </JobTitle>
+      <JobDescription></JobDescription>
+      <SectionTitle>{'你需要:'}</SectionTitle>
+      <JobNeed>
+        {props.needs.map(item => (
+          <JobNeedItem key={Math.random()}>{item}</JobNeedItem>
+        ))}
+      </JobNeed>
     </div>
   );
 }
