@@ -25,8 +25,8 @@ function Comment(props: commentProps) {
       <CommentPerson>
         <CommentAvatar src={props.avatar} alt={`avatar-${props.name}`} />
         <CommentName>
-          <p style={{color: '#eee'}}>{props.name}</p>
-          <p style={{color: '#ccc'}}>{props.description}</p>
+          <p style={{color: '#191919'}}>{props.name}</p>
+          <p style={{color: '#191919'}}>{props.description}</p>
         </CommentName>
       </CommentPerson>
     </CommentWrapper>

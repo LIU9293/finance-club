@@ -19,7 +19,7 @@ const CommentSectionWrapper = styled.div`
 
 function CommentSection(props: commentSectionProps) {
   return (
-    <div style={{backgroundColor: '#191919', padding: '96px 40px'}}>
+    <div style={{backgroundColor: '#eee', padding: '96px 40px'}}>
       <CommentSectionWrapper>
         <Row gutter={24}>
           <Col xs={24} sm={8}>

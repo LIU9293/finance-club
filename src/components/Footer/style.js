@@ -14,3 +14,7 @@ export const FooterInner = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+export const FooterText = styled.p`
+  color: #fff;
+`;

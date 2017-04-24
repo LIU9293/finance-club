@@ -7,6 +7,7 @@ import Helmet from 'react-helmet';
 import MainSection from 'components/MainSection';
 import IntroSection from 'components/IntroSection';
 import CommentSection from 'components/CommentSection';
+import ProjectSection from 'components/ProjectSection';
 
 type HomepageProps = {
   dispatch: func
@@ -27,6 +28,7 @@ export class Homepage extends React.PureComponent {
         />
         <MainSection />
         <IntroSection />
+        <ProjectSection />
         <CommentSection />
       </div>
     );

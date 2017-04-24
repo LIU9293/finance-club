@@ -7,7 +7,7 @@ export const CommentWrapper = styled.div`
 `;
 
 export const CommentWords = styled.div`
-  color: #fff029;
+  color: #191919;
   font-size: 24px;
   line-height: 1.4;
 `;
