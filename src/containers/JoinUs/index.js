@@ -10,6 +10,7 @@ import RoundButton from 'components/RoundButton';
 import {
   ImageFilter
 } from 'components/IntroSection/style';
+import { Col, Row } from 'antd';
 import { Title } from './style';
 import JobItem from 'components/JobItem';
 import BG5 from 'public/finance5.jpg';
@@ -26,54 +27,71 @@ export class JoinUs extends React.PureComponent {
           <ImageFilter />
           <div style={{display: 'flex', flex: 1, justifyContent: 'center', alignItems: 'center', zIndex: 3, flexDirection: 'column'}}>
             <p style={{fontSize: '40px', color: '#fff'}}>{'加入我们'}</p>
-            <a href={'mailto: 1178852418@qq.com'}>
+            <a href={'mailto: touhangzhijiaclub@163.com'}>
               <RoundButton primary>立即行动</RoundButton>
             </a>
           </div>
         </FullHeightSection>
         <div className='section-wrapper' style={{padding: '20px 30px'}}>
-          <Title>
-            {'社会招聘'}
-          </Title>
-          <JobItem
-            jobTitle='经纪人'
-            needs={[
-              'Build a microservice for pre-building application containers when users push new versions of their code.',
-              'Develop a log collection and delivery service for allowing front-ends to browse logs from running processes.',
-              'Build and maintain GraphQL performance instrumentation agents in languages ',
-              'Create a backend for collecting, aggregating, and serving a high resolution view'
-            ]}
-          />
-          <JobItem
-            jobTitle='营销经理'
-            needs={[
-              'Build a microservice for pre-building application containers when users push new versions of their code.',
-              'Develop a log collection and delivery service for allowing front-ends to browse logs from running processes.',
-              'Build and maintain GraphQL performance instrumentation agents in languages ',
-              'Create a backend for collecting, aggregating, and serving a high resolution view'
-            ]}
-          />
-          <Title>
-            {'校园招聘'}
-          </Title>
-          <JobItem
-            jobTitle='管理培训生'
-            needs={[
-              'Build a microservice for pre-building application containers when users push new versions of their code.',
-              'Develop a log collection and delivery service for allowing front-ends to browse logs from running processes.',
-              'Build and maintain GraphQL performance instrumentation agents in languages ',
-              'Create a backend for collecting, aggregating, and serving a high resolution view'
-            ]}
-          />
-          <JobItem
-            jobTitle='实习助理'
-            needs={[
-              'Build a microservice for pre-building application containers when users push new versions of their code.',
-              'Develop a log collection and delivery service for allowing front-ends to browse logs from running processes.',
-              'Build and maintain GraphQL performance instrumentation agents in languages ',
-              'Create a backend for collecting, aggregating, and serving a high resolution view'
-            ]}
-          />
+          <Row gutter={30}>
+            <Col xs={24} md={12}>
+              <Title>
+                {'社会招聘'}
+              </Title>
+              <JobItem
+                jobTitle='经纪人'
+                needs={[
+                  '协助完成品牌项目的策划、提案、执行.',
+                  '协助维护客户关系及开发客户关系.',
+                  '及时掌握客户需求，并与客户进行沟通、谈判、联络等工作.',
+                  '完成销售合同的签定、及时收回款项.',
+                  '配合完成直属领导指派的其他工作任务'
+                ]}
+                jobs={[
+                  '协助完成品牌项目的策划、提案、执行.',
+                  '协助维护客户关系及开发客户关系.',
+                  '及时掌握客户需求，并与客户进行沟通、谈判、联络等工作',
+                  '协助销售合同的签定、及时收回款项',
+                  '配合完成直属领导指派的其他工作任务'
+                ]}
+              />
+            </Col>
+            <Col xs={24} md={12}>
+              <Title>
+                {'校园招聘'}
+              </Title>
+              <JobItem
+                jobTitle='管理培训生'
+                needs={[
+                  '全日制大学本科学历及以上，2017年应届毕业生.',
+                  '优先考虑社团工作经验，活动策划与执行经验丰富者，在校有创业经历或丰富社会实践经历者.',
+                  '具备良好的沟通能力与应急能力，能够快速学习并调整工作节奏.',
+                  '有责任心、学习能力强,具备良好的团队合作精神.'
+                ]}
+                jobs={[
+                  '协助完成品牌项目的策划、提案、执行.',
+                  '协助维护客户关系及开发客户关系.',
+                  '及时掌握客户需求，并与客户进行沟通、谈判、联络等工作',
+                  '协助销售合同的签定、及时收回款项',
+                  '配合完成直属领导指派的其他工作任务'
+                ]}
+              />
+              <JobItem
+                jobTitle='实习助理'
+                needs={[
+                  '人际关系丰富，沟通能力强.',
+                  '时间充裕，能长期稳定参与.',
+                  '优先考虑社团工作经验，活动策划与执行经验丰富者',
+                  '执行力强，能按时高效完成Leader的任务'
+                ]}
+                jobs={[
+                  '与管理团队一起对接企业，提高沟通及商业谈判技巧',
+                  '优先推荐参与相关背景提升项目',
+                  '扩大人脉资源，为之后职业发展打下基础'
+                ]}
+              />
+            </Col>
+          </Row>
         </div>
       </AppLayout>
     );

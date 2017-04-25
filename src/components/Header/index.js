@@ -1,5 +1,4 @@
 /**
-* @flow
 * Header
 */
 import React from 'react';
@@ -11,6 +10,7 @@ import {
 const logo = require('./logo.svg');
 
 type headerProps = {
+  match: any
 }
 
 class Header extends React.Component {

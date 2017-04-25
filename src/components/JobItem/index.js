@@ -1,5 +1,4 @@
 /**
-* @flow
 * JobItem
 */
 import React from 'react';
@@ -23,9 +22,15 @@ function JobItem(props: jobItemProps) {
         {props.jobTitle}
       </JobTitle>
       <JobDescription></JobDescription>
-      <SectionTitle>{'你需要:'}</SectionTitle>
+      <SectionTitle>{'岗位要求:'}</SectionTitle>
       <JobNeed>
         {props.needs.map(item => (
+          <JobNeedItem key={Math.random()}>{item}</JobNeedItem>
+        ))}
+      </JobNeed>
+      <SectionTitle>{'工作内容:'}</SectionTitle>
+      <JobNeed>
+        {props.jobs.map(item => (
           <JobNeedItem key={Math.random()}>{item}</JobNeedItem>
         ))}
       </JobNeed>
