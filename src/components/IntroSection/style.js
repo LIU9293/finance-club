@@ -21,6 +21,7 @@ export const CardPart = styled.div`
 export const RightPart = styled.div`
   width: 100%;
   height: 700px;
+  padding: 36px;
   background-color: white;
 
   @media (max-width: 767px) {

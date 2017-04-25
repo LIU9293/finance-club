@@ -41,6 +41,12 @@ h2, h3, h4, h5, h6 {
   color: #191919;
 }
 
+hr {
+  color: #999;
+  opacity: 0.8;
+  margin: 10px 0;
+}
+
 .nav-menu {
   float: right;
   background: transparent !important;

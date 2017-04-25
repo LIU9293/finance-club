@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import AppLayout from 'containers/AppLayout';
 import Helmet from 'react-helmet';
 import FullHeightSection from 'components/FullHeightSection';
+import Founder from 'components/Founder';
 import RoundButton from 'components/RoundButton';
 import {
   ImageFilter
@@ -26,6 +27,7 @@ export class ContactUs extends React.PureComponent { // eslint-disable-line reac
             <p style={{fontSize: '40px', color: '#fff'}}>{'关于我们'}</p>
           </div>
         </FullHeightSection>
+        <Founder />
       </AppLayout>
     );
   }
