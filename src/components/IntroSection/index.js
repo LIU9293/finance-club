@@ -17,7 +17,7 @@ type introSectionProps = {
 
 function IntroSection(props: introSectionProps) {
   return (
-    <div className='section-wrapper'>
+    <div className='section-wrapper' id="intro">
       <Row gutter={24}>
         <Col sm={24} md={17} style={{marginBottom: '20px'}}>
           <Row gutter={0} type='flex' className='row-margin-small'>
@@ -60,7 +60,14 @@ function IntroSection(props: introSectionProps) {
           </Row>
         </Col>
         <Col sm={24} md={7}>
-          <RightPart></RightPart>
+          <RightPart>
+            <h1>金融人士</h1>
+            <hr />
+            <p></p>
+            <h1>在校生</h1>
+            <hr />
+            <p></p>
+          </RightPart>
         </Col>
       </Row>
     </div>

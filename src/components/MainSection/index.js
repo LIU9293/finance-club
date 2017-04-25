@@ -9,6 +9,9 @@ import RoundButton from 'components/RoundButton';
 import {
   FrontLabel
 } from './style';
+import {
+  ImageFilter
+} from 'components/IntroSection/style';
 import BG1 from 'public/finance1.jpg';
 
 type mainSectionProps = {
@@ -17,7 +20,8 @@ type mainSectionProps = {
 function MainSection(props: mainSectionProps) {
   return (
     <FullHeightSection backgroundImage={BG1}>
-      <SectionContent>
+      <ImageFilter />
+      <SectionContent style={{zIndex: 3}}>
         <FrontLabel>投行之家金融俱乐部</FrontLabel>
         <FrontLabel
           size={36}
@@ -25,7 +29,11 @@ function MainSection(props: mainSectionProps) {
         >
           财富之路从未如此畅通
         </FrontLabel>
-        <RoundButton primary>立即加入</RoundButton>
+        <RoundButton primary onClick={() => {
+          document.body.scrollTop = window.innerHeight - 80;
+        }}>
+          了解更多
+        </RoundButton>
       </SectionContent>
     </FullHeightSection>
   );
