@@ -4,6 +4,7 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
+import AppLayout from 'containers/AppLayout';
 import FullHeightSection from 'components/FullHeightSection';
 import RoundButton from 'components/RoundButton';
 import {
@@ -16,7 +17,7 @@ import BG5 from 'public/finance5.jpg';
 export class JoinUs extends React.PureComponent {
   render() {
     return (
-      <div>
+      <AppLayout match={this.props.match}>
         <Helmet title="加入我们 - 投行之家金融俱乐部" />
         <FullHeightSection
           style={{height: '500px'}}
@@ -74,7 +75,7 @@ export class JoinUs extends React.PureComponent {
             ]}
           />
         </div>
-      </div>
+      </AppLayout>
     );
   }
 }

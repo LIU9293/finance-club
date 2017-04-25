@@ -3,6 +3,7 @@
  */
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
+import AppLayout from 'containers/AppLayout';
 import Helmet from 'react-helmet';
 import FullHeightSection from 'components/FullHeightSection';
 import RoundButton from 'components/RoundButton';
@@ -14,7 +15,7 @@ import BG5 from 'public/finance5.jpg';
 export class ContactUs extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <div>
+      <AppLayout match={this.props.match}>
         <Helmet title="关于我们 - 投行之家金融俱乐部" />
         <FullHeightSection
           style={{height: '500px'}}
@@ -25,7 +26,7 @@ export class ContactUs extends React.PureComponent { // eslint-disable-line reac
             <p style={{fontSize: '40px', color: '#fff'}}>{'关于我们'}</p>
           </div>
         </FullHeightSection>
-      </div>
+      </AppLayout>
     );
   }
 }

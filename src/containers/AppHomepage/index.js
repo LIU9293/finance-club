@@ -8,6 +8,7 @@ import MainSection from 'components/MainSection';
 import IntroSection from 'components/IntroSection';
 import CommentSection from 'components/CommentSection';
 import ProjectSection from 'components/ProjectSection';
+import AppLayout from 'containers/AppLayout';
 
 type HomepageProps = {
   dispatch: func
@@ -19,7 +20,7 @@ export class Homepage extends React.PureComponent {
 
   render() {
     return (
-      <div>
+      <AppLayout match={this.props.match}>
         <Helmet
           title='投行之家金融俱乐部'
           meta={[
@@ -30,7 +31,7 @@ export class Homepage extends React.PureComponent {
         <IntroSection />
         <ProjectSection />
         <CommentSection />
-      </div>
+      </AppLayout>
     );
   }
 }

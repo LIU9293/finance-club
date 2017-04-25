@@ -18,21 +18,39 @@ class Header extends React.Component {
 
   state = {
     current: 'homepage',
-    light: false
+    light: false,
   }
 
   componentDidMount() {
-    document.addEventListener('scroll', () => {
-      if(window.pageYOffset > (window.innerHeight - 80)) {
-        if(!this.state.light){
-          this.setState({light: true});
-        }
-      } else {
-        if(this.state.light){
-          this.setState({light: false});
-        }
-      }
+    document.addEventListener('scroll', this.setLightHeader);
+    const { path } = this.props.match;
+    this.setState({
+      current: path.split('/').length > 1 ? path.split('/')[1] : 'homepage'
     });
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('scroll', this.setLightHeader);
+  }
+
+  setLightHeader = () => {
+    let height;
+    switch (this.props.match.path) {
+      case "/":
+        height = window.innerHeight;
+        break;
+      default:
+        height = 600;
+    }
+    if(window.pageYOffset > (height - 80)) {
+      if(!this.state.light){
+        this.setState({light: true});
+      }
+    } else {
+      if(this.state.light){
+        this.setState({light: false});
+      }
+    }
   }
 
   handleClick = (e: any) => {
@@ -68,9 +86,9 @@ class Header extends React.Component {
                   {'加入'}
                 </Link>
               </Menu.Item>
-              <Menu.Item key='contact'>
+              <Menu.Item key='about'>
                 <Link to='/about'>
-                  {'联系'}
+                  {'关于'}
                 </Link>
               </Menu.Item>
             </Menu>
