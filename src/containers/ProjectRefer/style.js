@@ -9,7 +9,8 @@ export const CompanyLogoContainer = styled.div`
 `;
 
 export const CompanyLogo = styled.img`
-  width: 200px;
+  width: 90%;
+  max-width: 200px;
   margin: 0 auto;
 `;
 

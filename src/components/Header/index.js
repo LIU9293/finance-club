@@ -8,6 +8,7 @@ import {
   HeaderRow
 } from './style';
 const logo = require('./logo.svg');
+const SubMenu = Menu.SubMenu;
 
 type headerProps = {
   match: any
@@ -21,12 +22,15 @@ class Header extends React.Component {
     light: false,
   }
 
-  componentDidMount() {
-    document.addEventListener('scroll', this.setLightHeader);
+  componentWillMount() {
     const { path } = this.props.match;
     this.setState({
-      current: path.split('/').length > 1 ? path.split('/')[1] : 'homepage'
+      current: path.split('/')[1] !== "" ? path.split('/')[1] : 'homepage'
     });
+  }
+
+  componentDidMount() {
+    document.addEventListener('scroll', this.setLightHeader);
   }
 
   componentWillUnmount() {
@@ -86,6 +90,14 @@ class Header extends React.Component {
                   {'加入'}
                 </Link>
               </Menu.Item>
+              <SubMenu title={'项目'}>
+                <Menu.Item key="refer">
+                  <Link to='/refer'>
+                    实习内推项目
+                  </Link>
+                </Menu.Item>
+                <Menu.Item key="hire">金融猎聘（暂未开放）</Menu.Item>
+              </SubMenu>
               <Menu.Item key='about'>
                 <Link to='/about'>
                   {'关于'}

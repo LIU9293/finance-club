@@ -10,11 +10,11 @@ export const CardPart = styled.div`
   background-color: white;
 
   @media (max-width: 767px) {
-    height: 250px;
+    height: 270px;
   }
 
   @media (max-width: 500px) {
-    height: 300px;
+    height: 320px;
   }
 `;
 
@@ -25,7 +25,7 @@ export const RightPart = styled.div`
   background-color: white;
 
   @media (max-width: 767px) {
-    height: 500px;
+    height: 600px;
   }
 `;
 

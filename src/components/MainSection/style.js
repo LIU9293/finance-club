@@ -7,5 +7,6 @@ export const FrontLabel = styled.div`
 
   @media (max-width: 767px) {
     font-size: ${props => props.sizeSmall || 44}px;
+    padding: 0 20px;
   }
 `;

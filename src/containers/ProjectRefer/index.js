@@ -31,9 +31,10 @@ import C2 from 'public/company/2.png';
 import C3 from 'public/company/3.png';
 import C4 from 'public/company/4.png';
 import C5 from 'public/company/5.png';
-import C6 from 'public/company/6.png';
+import C6 from 'public/company/6.png'
 import C7 from 'public/company/7.png';
 import C8 from 'public/company/8.png';
+import QRCode from 'public/baoming.jpg';
 
 export class ProjectRefer extends React.PureComponent {
   render() {
@@ -41,8 +42,8 @@ export class ProjectRefer extends React.PureComponent {
       dots: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 3
+      slidesToShow: window.innerWidth < 500 ? 2 : 3,
+      slidesToScroll: window.innerWidth < 500 ? 2 : 3
     };
     return (
       <AppLayout match={this.props.match}>
@@ -85,12 +86,12 @@ export class ProjectRefer extends React.PureComponent {
           </CompanyLogoContainer>
         </Carousel>
         <FullHeightSection
-          style={{height: '600px', marginTop: '40px'}}
+          style={{height: window.innerWidth < 500 ? '800px' : '600px', marginTop: '40px'}}
           backgroundImage={BG7}
         >
           <Row style={{height: '100%'}}>
             <Col xs={24} sm={12} style={{height: '100%'}}>
-              <ImageFilter />
+              <ImageFilter opacity={0.7} />
               <div style={{zIndex: 3, margin: '40px'}}>
                 <h1 style={{margin: '20px', color: '#fff'}}>你将有机会接触:</h1>
                 <Provide>
@@ -119,12 +120,15 @@ export class ProjectRefer extends React.PureComponent {
           <Row gutter={24}>
             <Col sm={24} md={7}>
               <RightPart>
-                <h1>金融人士</h1>
-                <hr />
-                <p></p>
-                <h1>在校生</h1>
-                <hr />
-                <p></p>
+                <h1>立即报名</h1>
+                <img src={QRCode} alt={'join'} />
+                <p>
+                  扫描上方二维码，立刻咨询更多详细介绍及参与项目，或者点击下方按钮直接发送
+                  邮件以及简历给我们
+                </p>
+                <a href={'mailto: touhangzhijiaclub@163.com'}>
+                  <RoundButton primary>发送邮件</RoundButton>
+                </a>
               </RightPart>
             </Col>
             <Col sm={24} md={17} style={{marginBottom: '20px'}}>
@@ -136,12 +140,11 @@ export class ProjectRefer extends React.PureComponent {
                 </Col>
                 <Col xs={24} sm={12}>
                   <CardPart>
-                    <h1>投行之家</h1>
+                    <h1>大学生实习定制</h1>
                     <p>
-                      {`你有一个很酷的点子或者项目想和JavaScript社区分享么？
-                        2017年的JS中国开发者大会将于7月15至16日在上海举行,
-                        现已开放演讲者及赞助商的申请通道，截止时间为北京时间2016年5月20日24点。
-                        欢迎所有JavaScirpt开发者及爱好者的踊跃参与！`
+                      {`投行之家金融俱乐部拥有丰富的金融企业资源，
+                        与各大企业从业精英保持密切联系，丰富的社会高端资源，
+                        可以为大学生会员的职业发展提供先期服务。`
                       }
                     </p>
                   </CardPart>
@@ -150,12 +153,12 @@ export class ProjectRefer extends React.PureComponent {
               <Row gutter={0} type="flex">
                 <Col xs={{span: 24, order: 2}} sm={{span: 12, order: 1}}>
                   <CardPart>
-                    <h1>金融俱乐部</h1>
+                    <h1>内推流程</h1>
                     <p>
-                      {`你有一个很酷的点子或者项目想和JavaScript社区分享么？
-                        2017年的JS中国开发者大会将于7月15至16日在上海举行,
-                        现已开放演讲者及赞助商的申请通道，截止时间为北京时间2016年5月20日24点。
-                        欢迎所有JavaScirpt开发者及爱好者的踊跃参与！`
+                      {`学生们通过我们的简历筛选与在线面试，一起商定实习目标，
+                        包括推荐地区、时间、单位、部门等，双方签订求职辅导与实习推荐协议，
+                        缴清会员费后，公司开始进行求职辅导与实习推荐。
+                        我们承诺推荐实习成功，如不成功，则全额退还会员费。`
                       }
                     </p>
                   </CardPart>

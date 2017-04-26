@@ -7,7 +7,6 @@ import AppLayout from 'containers/AppLayout';
 import Helmet from 'react-helmet';
 import FullHeightSection from 'components/FullHeightSection';
 import Founder from 'components/Founder';
-import RoundButton from 'components/RoundButton';
 import {
   ImageFilter
 } from 'components/IntroSection/style';
