@@ -20,7 +20,7 @@ export class AppLayout extends React.Component {
     return (
       <Layout id='app'>
         <AppHeader match={this.props.match} />
-        <Content style={{overflowX: 'hidden'}}>
+        <Content style={{overflow: 'hidden'}}>
           {this.props.children}
         </Content>
         <AppFooter />
