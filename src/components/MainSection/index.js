@@ -27,7 +27,7 @@ function MainSection(props: mainSectionProps) {
           size={36}
           sizeSmall={30}
         >
-          财富之路从未如此畅通
+          金融之路竟如此畅通
         </FrontLabel>
         <RoundButton primary onClick={() => {
           document.body.scrollTop = window.innerHeight - 80;
