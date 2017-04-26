@@ -44,10 +44,8 @@ function IntroSection(props: introSectionProps) {
               <CardPart>
                 <h1>Co-Founder: 朱灿</h1>
                 <p>
-                  {`你有一个很酷的点子或者项目想和JavaScript社区分享么？
-                    2017年的JS中国开发者大会将于7月15至16日在上海举行,
-                    现已开放演讲者及赞助商的申请通道，截止时间为北京时间2016年5月20日24点。
-                    欢迎所有JavaScirpt开发者及爱好者的踊跃参与！`
+                  {`投行之家金融俱乐部董事，合伙人。丰富的职业经历和行业背景，
+                    对留学教育、职业规划有独到的见解，重复创业者。`
                   }
                 </p>
               </CardPart>

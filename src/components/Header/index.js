@@ -8,7 +8,6 @@ import {
   HeaderRow
 } from './style';
 const logo = require('public/logo.png');
-const SubMenu = Menu.SubMenu;
 
 type headerProps = {
   match: any
@@ -85,19 +84,16 @@ class Header extends React.Component {
                   {'首页'}
                 </Link>
               </Menu.Item>
+              <Menu.Item key="refer">
+                <Link to='/refer'>
+                  {'实习内推项目'}
+                </Link>
+              </Menu.Item>
               <Menu.Item key='join'>
                 <Link to='/join'>
                   {'加入'}
                 </Link>
               </Menu.Item>
-              <SubMenu title={'项目'}>
-                <Menu.Item key="refer">
-                  <Link to='/refer'>
-                    实习内推项目
-                  </Link>
-                </Menu.Item>
-                <Menu.Item key="hire">金融猎聘（暂未开放）</Menu.Item>
-              </SubMenu>
               <Menu.Item key='about'>
                 <Link to='/about'>
                   {'关于'}

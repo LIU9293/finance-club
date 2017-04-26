@@ -57,6 +57,65 @@ export class ProjectRefer extends React.PureComponent {
             <FrontLabel style={{backgroundColor: 'transparent'}}>大学生实习内推计划</FrontLabel>
           </div>
         </FullHeightSection>
+        <h1 style={{textAlign: 'center', marginTop: '50px', fontSize: '40px'}}>合作机构</h1>
+        <hr style={{width: '50px', margin: 'auto'}} />
+        <Carousel {...settings} autoplay style={{height: '160px', lineHeight: '160px'}}>
+          <CompanyLogoContainer>
+            <CompanyLogo src={C1} alt='C1' />
+          </CompanyLogoContainer>
+          <CompanyLogoContainer>
+            <CompanyLogo src={C2} alt='C2' />
+          </CompanyLogoContainer>
+          <CompanyLogoContainer>
+            <CompanyLogo src={C3} alt='C3' />
+          </CompanyLogoContainer>
+          <CompanyLogoContainer>
+            <CompanyLogo src={C4} alt='C4' />
+          </CompanyLogoContainer>
+          <CompanyLogoContainer>
+            <CompanyLogo src={C5} alt='C5' />
+          </CompanyLogoContainer>
+          <CompanyLogoContainer>
+            <CompanyLogo src={C6} alt='C6' />
+          </CompanyLogoContainer>
+          <CompanyLogoContainer>
+            <CompanyLogo src={C7} alt='C7' />
+          </CompanyLogoContainer>
+          <CompanyLogoContainer>
+            <CompanyLogo src={C8} alt='C8' />
+          </CompanyLogoContainer>
+        </Carousel>
+        <FullHeightSection
+          style={{height: window.innerWidth < 500 ? '800px' : '600px', marginTop: '40px'}}
+          backgroundImage={BG7}
+        >
+          <Row style={{height: '100%'}}>
+            <Col xs={24} sm={12} style={{height: '100%'}}>
+              <ImageFilter opacity={0.7} />
+              <div style={{zIndex: 3, margin: '40px'}}>
+                <h1 style={{margin: '20px', color: '#fff'}}>你将有机会接触:</h1>
+                <Provide>
+                  <ProvideItem>
+                    {`前十券商的投行、行研、直投、固收、量化、资管、自营、场外市场等部门实习，
+                      如中金、中信、招商、广发、中信建投、申万、国泰君安、国信、华泰、银河、海通、光大等；`}
+                  </ProvideItem>
+                  <ProvideItem>
+                    {`知名VCPE公司的投资助理、行业分析师助理等，如红杉、IDG资本、九鼎、中科招商、深创投、达晨、君联资本等；`}
+                  </ProvideItem>
+                  <ProvideItem>
+                    {`四大会计事务所的审计、咨询、财务顾问等实习，还有立信、瑞华、天健等；`}
+                  </ProvideItem>
+                  <ProvideItem>
+                    {`MBB、罗兰贝格、LEK、埃森哲、科尔尼、四大咨询等外资咨询公司实习；`}
+                  </ProvideItem>
+                  <ProvideItem>
+                    {`外资银行实习，如花旗、德意志银行、汇丰、渣打等；`}
+                  </ProvideItem>
+                </Provide>
+              </div>
+            </Col>
+          </Row>
+        </FullHeightSection>
         <div className='section-wrapper'>
           <Row gutter={24}>
             <Col sm={24} md={7}>
@@ -113,65 +172,6 @@ export class ProjectRefer extends React.PureComponent {
             </Col>
           </Row>
         </div>
-        <FullHeightSection
-          style={{height: window.innerWidth < 500 ? '800px' : '600px', marginTop: '40px'}}
-          backgroundImage={BG7}
-        >
-          <Row style={{height: '100%'}}>
-            <Col xs={24} sm={12} style={{height: '100%'}}>
-              <ImageFilter opacity={0.7} />
-              <div style={{zIndex: 3, margin: '40px'}}>
-                <h1 style={{margin: '20px', color: '#fff'}}>你将有机会接触:</h1>
-                <Provide>
-                  <ProvideItem>
-                    {`前十券商的投行、行研、直投、固收、量化、资管、自营、场外市场等部门实习，
-                      如中金、中信、招商、广发、中信建投、申万、国泰君安、国信、华泰、银河、海通、光大等；`}
-                  </ProvideItem>
-                  <ProvideItem>
-                    {`知名VCPE公司的投资助理、行业分析师助理等，如红杉、IDG资本、九鼎、中科招商、深创投、达晨、君联资本等；`}
-                  </ProvideItem>
-                  <ProvideItem>
-                    {`四大会计事务所的审计、咨询、财务顾问等实习，还有立信、瑞华、天健等；`}
-                  </ProvideItem>
-                  <ProvideItem>
-                    {`MBB、罗兰贝格、LEK、埃森哲、科尔尼、四大咨询等外资咨询公司实习；`}
-                  </ProvideItem>
-                  <ProvideItem>
-                    {`外资银行实习，如花旗、德意志银行、汇丰、渣打等；`}
-                  </ProvideItem>
-                </Provide>
-              </div>
-            </Col>
-          </Row>
-        </FullHeightSection>
-        <h1 style={{textAlign: 'center', marginTop: '50px', fontSize: '40px'}}>合作机构</h1>
-        <hr style={{width: '50px', margin: 'auto'}} />
-        <Carousel {...settings} autoplay style={{height: '160px', lineHeight: '160px'}}>
-          <CompanyLogoContainer>
-            <CompanyLogo src={C1} alt='C1' />
-          </CompanyLogoContainer>
-          <CompanyLogoContainer>
-            <CompanyLogo src={C2} alt='C2' />
-          </CompanyLogoContainer>
-          <CompanyLogoContainer>
-            <CompanyLogo src={C3} alt='C3' />
-          </CompanyLogoContainer>
-          <CompanyLogoContainer>
-            <CompanyLogo src={C4} alt='C4' />
-          </CompanyLogoContainer>
-          <CompanyLogoContainer>
-            <CompanyLogo src={C5} alt='C5' />
-          </CompanyLogoContainer>
-          <CompanyLogoContainer>
-            <CompanyLogo src={C6} alt='C6' />
-          </CompanyLogoContainer>
-          <CompanyLogoContainer>
-            <CompanyLogo src={C7} alt='C7' />
-          </CompanyLogoContainer>
-          <CompanyLogoContainer>
-            <CompanyLogo src={C8} alt='C8' />
-          </CompanyLogoContainer>
-        </Carousel>
       </AppLayout>
     );
   }

@@ -34,6 +34,12 @@ function JobItem(props: jobItemProps) {
           <JobNeedItem key={Math.random()}>{item}</JobNeedItem>
         ))}
       </JobNeed>
+      <SectionTitle>{'工作福利:'}</SectionTitle>
+      <JobNeed>
+        {props.benefits.map(item => (
+          <JobNeedItem key={Math.random()}>{item}</JobNeedItem>
+        ))}
+      </JobNeed>
     </div>
   );
 }
