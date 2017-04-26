@@ -13,10 +13,86 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>投行之家金融俱乐部</title>
   </head>
   <body>
     <div id="root"></div>
+    <style>
+    * {
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      font-family: -apple-system, "PingFang SC", "Microsoft YaHei", segoe, "Roboto", "Arial", sans-serif;
+    }
+
+    .section-wrapper {
+      width: 80%;
+      max-width: 1440px;
+      margin: 96px auto;
+      background-color: #ececec;
+    }
+
+    @media (max-width: 767px) {
+      .section-wrapper {
+        width: 100%;
+      }
+      .row-margin-small {
+        margin-bottom: 20px;
+      }
+    }
+
+    p {
+      color: #191919;
+      font-size: 16px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin: 10px 0;
+      color: #191919;
+    }
+
+    h2, h3, h4, h5, h6 {
+      color: #191919;
+    }
+
+    hr {
+      color: #999;
+      opacity: 0.8;
+      margin: 10px 0;
+    }
+
+    .nav-menu {
+      float: right;
+      background: transparent !important;
+      height: 80px;
+      border: none;
+      line-height: 80px !important;
+      font-size: 18px !important;
+    }
+
+    .ant-carousel .slick-initialized .slick-slide {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+
+    .ant-carousel .slick-slide {
+      text-align: center;
+      height: 300px;
+      background: #ececec;
+      color: #666;
+      overflow: hidden;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+    </style>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
