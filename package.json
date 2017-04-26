@@ -124,7 +124,7 @@
   "pre-commit": [
     "lint"
   ],
-  "homepage": "https://liu9293.github.io/finance-club",
+  "homepage": "http://hoibr.cn",
   "eslintConfig": {
     "extends": "react-app"
   }
