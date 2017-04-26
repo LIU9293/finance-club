@@ -14,7 +14,7 @@ html, body {
   width: 80%;
   max-width: 1440px;
   margin: 96px auto;
-  background-color: #eee;
+  background-color: #ececec;
 }
 
 @media (max-width: 767px) {
@@ -65,8 +65,8 @@ hr {
 .ant-carousel .slick-slide {
   text-align: center;
   height: 300px;
-  background: #eee;
-  color: #eee;
+  background: #ececec;
+  color: #666;
   overflow: hidden;
   display: flex !important;
   justify-content: center !important;
