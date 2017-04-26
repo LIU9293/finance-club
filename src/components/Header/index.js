@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import {
   HeaderRow
 } from './style';
-const logo = require('./logo.svg');
+const logo = require('public/logo.png');
 const SubMenu = Menu.SubMenu;
 
 type headerProps = {
