@@ -17,8 +17,8 @@ function Footer(props: footerProps) {
     <FooterWrapper>
       <FooterInner>
         <FooterText>{'投行之家金融俱乐部'}</FooterText>
-        <FooterText>{'联系电话: 17625907524'}</FooterText>
-        <FooterText>{'联系邮箱: 1178852418@qq.com'}</FooterText>
+        <FooterText>{'联系电话: 025-85985134'}</FooterText>
+        <FooterText>{'联系邮箱: touhangzhijiaclub@163.com'}</FooterText>
         <FooterText>{'地址: 江苏省南京市鼓楼区中山路179号A座10楼'}</FooterText>
       </FooterInner>
     </FooterWrapper>

@@ -57,7 +57,7 @@ export class ProjectRefer extends React.PureComponent {
             <FrontLabel style={{backgroundColor: 'transparent'}}>大学生实习内推计划</FrontLabel>
           </div>
         </FullHeightSection>
-        <h1 style={{textAlign: 'center', marginTop: '50px', fontSize: '40px'}}>合作机构</h1>
+        <h1 style={{textAlign: 'center', marginTop: '50px', fontSize: '40px'}}>内推公司</h1>
         <hr style={{width: '50px', margin: 'auto'}} />
         <Carousel {...settings} autoplay style={{height: '160px', lineHeight: '160px'}}>
           <CompanyLogoContainer>

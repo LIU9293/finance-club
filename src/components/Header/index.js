@@ -91,7 +91,7 @@ class Header extends React.Component {
               </Menu.Item>
               <Menu.Item key='join'>
                 <Link to='/join'>
-                  {'加入'}
+                  {'招贤纳士'}
                 </Link>
               </Menu.Item>
               <Menu.Item key='about'>
